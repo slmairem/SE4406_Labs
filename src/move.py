@@ -5,7 +5,8 @@ from geometry_msgs.msg import Twist
 
 def movetask():
 	rospy.init_node("movenode",anonymous=True)
-	pub = rospy.Publisher("/turtle1/cmd_vel", Twist, queue_size=10 )
+	# spub = rospy.Publisher("/turtle1/cmd_vel", Twist, queue_size=10 )
+	pub = rospy.Publisher("/cmd_vel", Twist, queue_size=10 )
 	vel_msg= Twist()
 	vel_msg.linear.x= 0.2
 	vel_msg.linear.y= 0

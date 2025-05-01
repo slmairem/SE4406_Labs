@@ -1,0 +1,7 @@
+<launch>
+	<node pkg="stage_ros" name="robot" type="stageros" args="$rosrun stage_ros stageros $(find beginner_tutorials)/world/worldfile.world"/>
+
+	<node pkg="beginner_tutorials" name="move1" args="0" type="moveStage.py"/>
+	<node pkg="beginner_tutorials" name="move2" args="1" type="moveStage.py"/> 
+
+</launch>
